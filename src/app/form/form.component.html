@@ -1,0 +1,49 @@
+<div class="container">
+    <h4 class="mt-3">User Form</h4>
+    <hr>
+    <form #userForm="ngForm" (ngSubmit)="onSubmit()">
+        {{userForm.value | json}}
+        <p>{{userModel | json}}</p>
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" #name="ngModel" name="name" required class="form-control" [class.is-invalid]="name.invalid" id="name" [(ngModel)]="userModel.name">
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="tel" pattern="\d{10}" #phone="ngModel" name="phone" required class="form-control" [class.is-invalid]="phone.invalid" id="phone" [(ngModel)]="userModel.phone">
+                <p *ngIf="phone.errors?.['required']" class="text-danger">Phone number is required</p>
+                <p *ngIf="phone.errors?.['pattern']" class="text-danger">Enter 10 digits</p>
+                <p *ngIf="checkNumber(phone.value)" class="text-danger"> Prohibited number</p>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" name="email" required class="form-control" id="email" placeholder="name@example.com" [(ngModel)]="userModel.email">
+        </div>
+        <div class="mb-3">
+            <label for="gender" class="form-label">Choose a gender</label>
+            <select class="form-select" id="gender" name="gender" [(ngModel)]="userModel.gender">
+                <option>Select a gender</option>
+                <option *ngFor="let course of courses">{{course}}</option>
+            </select>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" value="active" name="status" [(ngModel)]="userModel.status" id="time1" ngModel>
+            <label class="form-check-label" for="time1">
+                Morning
+            </label>
+        </div>
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="radio" value="inactive" name="status" [(ngModel)]="userModel.status" id="time2" ngModel>
+            <label class="form-check-label" for="time2">
+                Evening
+            </label>
+        </div>
+        <div class="form-check" class="mb-3">
+            <input class="form-check-input" type="checkbox" value="" name="terms" [(ngModel)]="userModel.terms" id="terms" ngModel>
+            <label class="form-check-label" for="terms">
+                &nbsp; Agree to Terms & Conditions
+            </label>
+        </div>
+        <button class="btn btn-primary mb-3" >Submit</button>
+    </form>
+</div>

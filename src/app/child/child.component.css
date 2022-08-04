@@ -1,0 +1,6 @@
+.border {
+    padding: 30px;
+    border: 2px dotted #666;
+    border-radius: 20px;
+    display: inline-block;
+}

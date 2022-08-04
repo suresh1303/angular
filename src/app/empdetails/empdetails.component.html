@@ -1,0 +1,49 @@
+<p>The employee ID is {{myid}}</p>
+
+
+
+<table  cellpadding="10">
+    <tr *ngFor="let emp of empData">
+        <td *ngIf="emp.id == myid">
+    <tr>
+        <td>
+            Emp ID: </td>
+        <td><input [value]="emp.id"></td>
+
+           </tr> <tr>
+        <td>
+            Emp Name:</td>
+        <td><input [value]="emp.name"></td>
+
+    </tr> <tr>
+        <td>
+            Status: </td>
+        <td> <select [value]="emp.status">
+                <option>--Select</option>
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+            </select>
+        </td>
+    </tr> <tr>
+
+        <td>
+            Gender: </td>
+        <td><select [value]="emp.gender">
+                <option>--Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </td>
+    </tr> <tr>
+
+
+    </tr>
+    </td>
+    </tr>
+</table>
+
+<p>
+    <button (click)="showDept1()">Dept1</button> &nbsp; <button (click)="showDept2()">Dept2</button>
+</p>
+
+<router-outlet></router-outlet>

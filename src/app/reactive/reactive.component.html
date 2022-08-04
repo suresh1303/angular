@@ -1,0 +1,50 @@
+<div class="container">
+    <h4 class="mt-3">Reactive Form</h4>
+    <hr>
+    {{ reactiveForm.value | json}}
+    <form [formGroup]="reactiveForm">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" formControlName="name" name="name" required class="form-control"  id="name" >
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" formControlName="email" name="email"  class="form-control" id="email" >
+        </div>
+        <div class="mb-3">
+            <label for="gender" class="form-label">Choose a gender</label>
+            <select class="form-select" formControlName="gender" id="gender" name="gender" >
+                <option>Select a gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" formControlName="status" type="radio" value="active" name="status"  id="status1" >
+            <label class="form-check-label" for="status1">
+                Active
+            </label>
+        </div>
+        <div class="form-check mb-3">
+            <input class="form-check-input" formControlName="status" type="radio" value="inactive" name="status"  id="status2">
+            <label class="form-check-label" for="status2">
+                Inactive
+            </label>
+        </div>
+        <div formGroupName="address">
+            <div class="mb-3">
+                <label for="city" class="form-label">City</label>
+                <input type="text" formControlName="city" name="city" required class="form-control"  id="city" >
+            </div>
+            <div class="mb-3">
+                <label for="state" class="form-label">State</label>
+                <input type="text" formControlName="state" name="state" required class="form-control"  id="state" >
+            </div>
+            <div class="mb-3">
+                <label for="postalcode" class="form-label">Postalcode</label>
+                <input type="text" formControlName="postalcode" name="postalcode" required class="form-control"  id="postalcode" >
+            </div>
+        </div>
+        <button class="btn btn-primary mb-3" >Submit</button> &nbsp; <button (click)="setValue()" class="btn btn-primary mb-3 " >Set Value</button> &nbsp; <button (click)="patchValue()" class="btn btn-primary mb-3 " >Patch Value</button>
+    </form>
+</div>

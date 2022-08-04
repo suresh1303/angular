@@ -1,0 +1,19 @@
+body, div, p, input, select {
+    font-family: 'Poppins', sans-serif !important;
+    color: #333;
+}
+nav a {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    font-family: 'Poppins', sans-serif !important;
+    margin-right: 5px;
+    text-decoration: none;
+    color: #666;
+    background: #ddd;
+}
+nav a.active {
+    border: 1px solid #999;
+    color: #000;
+    background: #eeeeee;
+}

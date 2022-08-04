@@ -1,0 +1,53 @@
+<hr>
+<ul class="nobullet" >
+    <li (click)="handleClick(emp.id)" *ngFor="let emp of empData">
+       <a> {{emp.name  }} </a>
+    </li>
+</ul>
+
+
+
+
+
+
+<!--
+<p>Message goes here: {{message}}</p>
+<app-child (mydata)="message=$event" name="Suresh"></app-child>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<p>Parent component goes here</p>
+<p>{{'Data from child: '+ message}}</p>
+<app-child (mydata)="message=$event" name="Suresh"></app-child>
+<p><input [(ngModel)]="inputval" placeholder="Enter a value here" type="text"> </p>
+<p>{{inputval}}</p>
+
+<p><b>Pipes examples</b></p>
+<p>{{name | lowercase}}</p>
+<p>{{name | uppercase}}</p>
+<p>{{name | slice: 2:7 | uppercase}}</p>
+<p>{{message1 | titlecase}}</p>
+<p>{{jsonval | json}}</p>
+
+<p>{{5.167 | number:'1.2-3'}}</p>
+<p>{{5.167 | number:'3.4-5'}}</p>
+<p>{{5.167 | number:'1.1-2'}}</p>
+
+<p>{{0.25 | percent}}</p>
+
+<p>{{2.25 | currency }}</p>
+<p>{{2.25 | currency:'GBP ':'code'}}</p>
+-->

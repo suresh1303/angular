@@ -1,0 +1,21 @@
+ul.nobullet {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.active {
+    font-weight: bold;
+    color: green;
+}
+.inactive {
+    font-weight: bold;
+    color: red;
+}
+ul.nobullet li a {
+    text-decoration: underline;
+    cursor:pointer;
+    color: navy;
+}
+ul.nobullet li a:hover {
+    text-decoration: none;
+}
