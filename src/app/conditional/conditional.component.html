@@ -4,7 +4,7 @@
     {{ reactiveForm.value | json}}
     <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
         <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
+            <label for="name" class="form-label">Name</label> 
             <input type="text" [class.is-invalid]="formname?.errors?.['required'] && formname?.touched"
                 formControlName="name" class="form-control">
             <p class="text-danger" *ngIf="formname?.errors?.['required'] && formname?.touched">Enter a valid name</p>

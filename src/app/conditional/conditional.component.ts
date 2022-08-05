@@ -55,7 +55,7 @@ export class ConditionalComponent implements OnInit {
   }
 
   get formemail() {
-    return this.reactiveForm.get('email');
+    return this.reactiveForm.get('email'); 
   }
 
   onSubmit() {
