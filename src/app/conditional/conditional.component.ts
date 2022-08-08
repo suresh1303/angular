@@ -12,11 +12,7 @@ import { SubmitformService } from '../submitform.service';
 export class ConditionalComponent implements OnInit {
 
   reactiveForm = new FormGroup({});
-
-
-  constructor(private fb: FormBuilder, private _submitForm:SubmitformService) {
-
-  }
+  constructor(private fb: FormBuilder, private _submitForm:SubmitformService) {  }
 
   ngOnInit(): void {
     this.reactiveForm = this.fb.group({
